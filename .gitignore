@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Configurazione locale degli strumenti (contiene percorsi assoluti di questa macchina)
+.claude/
+
+# Sorgenti video non compressi: nel repo vanno solo i file già pronti per il web
+assets/video/*_raw.*
+
+# Immagine di riferimento per le generazioni, non fa parte del sito
+assets/reference/
