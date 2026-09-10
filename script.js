@@ -32,9 +32,7 @@ const SITE = {
     { slug: "mutewell",   status: "", poster: "assets/img/work/mutewell.webp", href: "" },
     { slug: "cleancut",   status: "", poster: "assets/img/work/cleancut.webp", href: "" },
     { slug: "aegisos",    status: "", poster: "assets/img/work/aegisos.webp",  href: "" },
-    // ⚠️ Manca l'icona di MT5 Bridge: finché poster resta vuoto la card usa il
-    // segnaposto tipografico. Basta metterne una in assets/img/work/ e citarla qui.
-    { slug: "mt5-bridge", status: "", poster: "", href: "" }
+    { slug: "mt5-bridge", status: "", poster: "assets/img/work/mt5-bridge.webp", href: "" }
   ],
 
   timezone: "Europe/Rome"
