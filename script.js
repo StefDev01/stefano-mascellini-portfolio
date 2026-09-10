@@ -8,8 +8,8 @@
    1 · CONFIGURAZIONE — l’unico blocco da modificare a mano.
    ─────────────────────────────────────────────────────────────────────────── */
 const SITE = {
-  // ⚠️ Confermare l’indirizzo pubblico prima del lancio (BUILD-PLAN, Open Item #1).
-  email: "stefano.mascellini09@gmail.com",
+  // Indirizzo pubblico di contatto, confermato da Stefano il 10 settembre 2026.
+  email: "stefanomascellinilavoro@gmail.com",
 
   // "" → il form apre il client di posta (mailto).
   // Incollare qui un endpoint Formspree/Getform/Basin per inviare via HTTP.
