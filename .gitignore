@@ -11,3 +11,6 @@ assets/video/*_raw.*
 
 # Immagine di riferimento per le generazioni, non fa parte del sito
 assets/reference/
+
+# Dependencies
+node_modules/

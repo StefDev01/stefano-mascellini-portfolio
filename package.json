@@ -1,0 +1,17 @@
+{
+  "name": "stefano-mascellini-portfolio",
+  "version": "1.0.0",
+  "description": "Stefano Mascellini — Portfolio. Sito statico HTML/CSS/JS vanilla.",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8137 --bind 127.0.0.1",
+    "lint": "echo 'No linter configured for vanilla HTML/CSS/JS'",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "keywords": ["portfolio", "static-site"],
+  "author": "Stefano Mascellini",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  }
+}
