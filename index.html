@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stefano Mascellini — Dall’idea al software</title>
+
+<meta name="description" content="Sviluppatore indipendente. Siti web, applicazioni desktop e mobile, automazioni e bot. Progettati e costruiti da una persona sola.">
+<meta name="theme-color" content="#050506">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="Stefano Mascellini">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stefano Mascellini — Dall’idea al software">
+<meta property="og:description" content="Siti web, applicazioni desktop e mobile, automazioni. Progettati e costruiti da una persona sola.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script>document.documentElement.classList.replace('no-js','js');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Stefano Mascellini",
+  "jobTitle": "Software Developer",
+  "nationality": "IT",
+  "knowsAbout": ["Web development","Desktop applications","Mobile applications","Automation","Telegram bots","macOS","Windows"],
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Siti web"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Applicazioni desktop e mobile"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Automazioni e bot"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="a11y.skip">Vai al contenuto</a>
+
+<!-- ══ PRELOADER ═══════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__count"><span id="preCount">00</span></div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <p class="preloader__meta">STEFANO MASCELLINI — PORTFOLIO ©2026</p>
+</div>
+
+<!-- ══ ATMOSPHERE ══════════════════════════════════════════════════════════ -->
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><i class="cursor__ring"></i></div>
+
+<div class="rail" id="rail" aria-hidden="true">
+  <span class="rail__label" id="railLabel">01 — ORIGINE</span>
+  <span class="rail__track"><i id="railFill"></i></span>
+</div>
+
+<!-- ══ NAV ═════════════════════════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#hero" data-cursor="link">Stefano&nbsp;Mascellini</a>
+
+    <nav class="nav__links" aria-label="Principale">
+      <a href="#servizi"  data-nav="servizi"  data-i18n="nav.services">Servizi</a>
+      <a href="#lavori"   data-nav="lavori"   data-i18n="nav.work">Lavori</a>
+      <a href="#percorso" data-nav="percorso" data-i18n="nav.path">Percorso</a>
+    </nav>
+
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--sm" href="#contatti" data-cursor="link" data-i18n="nav.contact">Contatti</a>
+    </div>
+
+    <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__links" aria-label="Menu">
+    <a href="#servizi"  data-i18n="nav.services">Servizi</a>
+    <a href="#lavori"   data-i18n="nav.work">Lavori</a>
+    <a href="#percorso" data-i18n="nav.path">Percorso</a>
+    <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+  </nav>
+  <div class="menu__foot">
+    <button type="button" class="lang__btn" data-lang="it">IT</button>
+    <span class="lang__sep" aria-hidden="true">/</span>
+    <button type="button" class="lang__btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ══ 01 · HERO ═══════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="heroTitle">
+  <div class="hero__pin">
+
+    <div class="hero__media" aria-hidden="true">
+      <video class="hero__video" id="heroVideo" muted playsinline preload="auto"></video>
+      <!-- Fallback cinematografico in CSS: si anima con la stessa timeline del video.
+           Geometria vera: piano scrivania, base appoggiata, coperchio incernierato
+           sul bordo posteriore. La faccia interna è lo schermo (backface). -->
+      <div class="mac" id="mac">
+        <div class="mac__scene">
+          <div class="mac__world">
+            <div class="mac__base">
+              <i class="mac__deck"></i>
+              <i class="mac__pad"></i>
+            </div>
+            <i class="mac__hinge"></i>
+            <div class="mac__lid">
+              <i class="mac__shell"></i>
+              <i class="mac__panel"><b class="mac__glow"></b></i>
+            </div>
+          </div>
+          <i class="mac__beam"></i>
+          <i class="mac__floor"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Sviluppatore indipendente — Italia</p>
+      <h1 class="hero__title" id="heroTitle">
+        <span class="hero__l" data-split data-i18n="hero.l1">Dall’idea</span>
+        <span class="hero__l" data-split data-i18n="hero.l2">al</span>
+        <span class="hero__l sheen" data-split data-i18n="hero.l3">software.</span>
+      </h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">Siti, applicazioni desktop e mobile, automazioni. Progettati e costruiti da una persona sola — come se fossero miei.</p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#contatti" data-magnetic data-cursor="link"><span data-i18n="hero.cta1">Parliamo del tuo progetto</span></a>
+        <a class="btn btn--ghost" href="#lavori" data-magnetic data-cursor="link"><span data-i18n="hero.cta2">Guarda i lavori</span></a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span data-i18n="hero.scroll">Scorri</span><i></i>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 02 · PRODOTTI ═══════════════════════════════════════════════════════ -->
+<section class="products" id="prodotti" aria-labelledby="prodTitle">
+  <div class="wrap">
+    <header class="products__head">
+      <p class="eyebrow" data-i18n="products.eyebrow">Quattro prodotti a mio nome</p>
+      <h2 class="products__line" id="prodTitle" data-split data-i18n="products.title">Non solo per i clienti.</h2>
+    </header>
+
+    <ul class="manifest" id="manifest">
+      <li class="manifest__row" data-slug="mutewell">
+        <a href="#lavori" data-cursor="link">
+          <span class="manifest__i">01</span>
+          <span class="manifest__name">MuteWell</span>
+          <span class="manifest__plat" data-i18n="platform.macos">macOS</span>
+          <span class="manifest__status" data-status></span>
+          <span class="manifest__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li class="manifest__row" data-slug="cleancut">
+        <a href="#lavori" data-cursor="link">
+          <span class="manifest__i">02</span>
+          <span class="manifest__name">CleanCut</span>
+          <span class="manifest__plat" data-i18n="platform.macos">macOS</span>
+          <span class="manifest__status" data-status></span>
+          <span class="manifest__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li class="manifest__row" data-slug="aegisos">
+        <a href="#lavori" data-cursor="link">
+          <span class="manifest__i">03</span>
+          <span class="manifest__name">AegisOS</span>
+          <span class="manifest__plat" data-i18n="platform.cross">Multipiattaforma</span>
+          <span class="manifest__status" data-status></span>
+          <span class="manifest__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li class="manifest__row" data-slug="mt5-bridge">
+        <a href="#lavori" data-cursor="link">
+          <span class="manifest__i">04</span>
+          <span class="manifest__name">MT5 Bridge</span>
+          <span class="manifest__plat" data-i18n="platform.windows">Windows</span>
+          <span class="manifest__status" data-status></span>
+          <span class="manifest__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marquee">
+      <span>Siti web · App desktop · App mobile · Bot Telegram · Automazioni Windows · Web app · Debug &amp; Rescue ·&nbsp;</span>
+      <span>Siti web · App desktop · App mobile · Bot Telegram · Automazioni Windows · Web app · Debug &amp; Rescue ·&nbsp;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 · MISSIONE ═══════════════════════════════════════════════════════ -->
+<section class="mission" id="missione" aria-labelledby="misTitle">
+  <span class="mission__ghost" id="misGhost" aria-hidden="true">Idea</span>
+  <div class="wrap mission__inner">
+    <p class="eyebrow" data-i18n="mission.eyebrow">Il motivo</p>
+    <h2 class="mission__statement" id="misTitle" data-split data-i18n="mission.title">Ogni idea merita un posto dove esistere. Ogni azione ripetuta merita di sparire dentro un software.</h2>
+    <p class="mission__body reveal" data-i18n="mission.body">Non credo nei processi manuali sopravvissuti per abitudine. Se lo fai due volte allo stesso modo, può farlo una macchina. Io costruisco quella macchina — e il sito, o l’app, che le sta intorno.</p>
+  </div>
+</section>
+
+<!-- ══ ▸ · SCENA 02 — LE TRE FORME ═════════════════════════════════════════ -->
+<section class="break" id="forme" aria-labelledby="breakTitle">
+  <div class="break__media" aria-hidden="true">
+    <video class="break__video" id="formsVideo" muted loop playsinline preload="none"></video>
+    <div class="forms" id="forms">
+      <i class="forms__slab forms__slab--a"></i>
+      <i class="forms__slab forms__slab--b"></i>
+      <i class="forms__slab forms__slab--c"></i>
+    </div>
+  </div>
+  <div class="break__scrim" aria-hidden="true"></div>
+  <div class="wrap break__content">
+    <p class="eyebrow" data-i18n="break.eyebrow">Tre forme</p>
+    <h2 class="break__title" id="breakTitle" data-split data-i18n="break.title">Una persona sola. Dall’inizio alla fine.</h2>
+    <p class="mono break__meta reveal" data-i18n="break.meta">Stefano Mascellini — Italia</p>
+  </div>
+</section>
+
+<!-- ══ 04 · SERVIZI ════════════════════════════════════════════════════════ -->
+<section class="pillars" id="servizi" aria-labelledby="pilTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow" data-i18n="pillars.eyebrow">Cosa costruisco</p>
+      <h2 class="sec__title" id="pilTitle" data-split data-i18n="pillars.title">Tre discipline. Un solo standard.</h2>
+    </header>
+
+    <div class="pillars__list" id="pillars">
+      <article class="pillar" data-cursor="link">
+        <span class="pillar__i mono">01</span>
+        <div class="pillar__main">
+          <h3 class="pillar__title" data-i18n="pillars.p1.title">Siti web</h3>
+          <p class="pillar__body" data-i18n="pillars.p1.body">Siti che sembrano costruiti su misura, perché lo sono. Nessun template, nessun page builder: struttura, animazioni e performance scritte a mano.</p>
+        </div>
+        <ul class="pillar__tags mono" data-i18n-list="pillars.p1.tags">
+          <li>Landing page</li><li>Portfolio</li><li>E-commerce</li><li>Web app</li><li>SEO tecnica</li><li>Performance</li>
+        </ul>
+      </article>
+
+      <article class="pillar" data-cursor="link">
+        <span class="pillar__i mono">02</span>
+        <div class="pillar__main">
+          <h3 class="pillar__title" data-i18n="pillars.p2.title">Applicazioni</h3>
+          <p class="pillar__body" data-i18n="pillars.p2.body">Desktop e mobile. Native dove serve, veloci sempre. Applicazioni che si installano una volta e poi si smette di pensarci.</p>
+        </div>
+        <ul class="pillar__tags mono" data-i18n-list="pillars.p2.tags">
+          <li>macOS</li><li>Windows</li><li>iOS</li><li>Android</li><li>Menu bar tools</li><li>Interfacce native</li>
+        </ul>
+      </article>
+
+      <article class="pillar" data-cursor="link">
+        <span class="pillar__i mono">03</span>
+        <div class="pillar__main">
+          <h3 class="pillar__title" data-i18n="pillars.p3.title">Automazioni</h3>
+          <p class="pillar__body" data-i18n="pillars.p3.body">Bot Telegram, script Windows, pipeline che girano da sole. Quello che facevi a mano ogni giorno, semplicemente non lo fai più.</p>
+        </div>
+        <ul class="pillar__tags mono" data-i18n-list="pillars.p3.tags">
+          <li>Bot Telegram</li><li>Automazioni Windows</li><li>Scraping</li><li>Integrazioni API</li><li>Job schedulati</li><li>Alert</li>
+        </ul>
+      </article>
+    </div>
+
+    <aside class="rescue reveal">
+      <p class="eyebrow" data-i18n="rescue.eyebrow">Debug &amp; Rescue</p>
+      <p class="rescue__body"><strong data-i18n="rescue.lead">Hai già un progetto e non funziona?</strong> <span data-i18n="rescue.body">Entro nel codice scritto da qualcun altro, capisco cosa si è rotto e lo rimetto in piedi. Anche se è stato abbandonato a metà.</span></p>
+    </aside>
+  </div>
+</section>
+
+<!-- ══ 05 · PERCORSO ═══════════════════════════════════════════════════════ -->
+<section class="story" id="percorso" aria-labelledby="stoTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow" data-i18n="story.eyebrow">Come sono arrivato qui</p>
+      <h2 class="sec__title" id="stoTitle" data-split data-i18n="story.title">È iniziato tutto da una cosa noiosa.</h2>
+    </header>
+  </div>
+
+  <div class="story__viewport">
+    <div class="story__track" id="storyTrack">
+      <article class="chapter">
+        <span class="chapter__n" aria-hidden="true">01</span>
+        <h3 class="chapter__title" data-i18n="story.c1.title">Il problema noioso</h3>
+        <p class="chapter__body" data-i18n="story.c1.body">C’era una cosa che dovevo fare ogni giorno. A mano. Sempre uguale. Non era difficile, era solo un furto di tempo, ripetuto all’infinito.</p>
+      </article>
+      <article class="chapter">
+        <span class="chapter__n" aria-hidden="true">02</span>
+        <h3 class="chapter__title" data-i18n="story.c2.title">La prima applicazione</h3>
+        <p class="chapter__body" data-i18n="story.c2.body">Un giorno ho smesso di lamentarmi e ho scritto un programma che lo facesse al posto mio. Ha funzionato. E quella cosa non l’ho più fatta.</p>
+      </article>
+      <article class="chapter">
+        <span class="chapter__n" aria-hidden="true">03</span>
+        <h3 class="chapter__title" data-i18n="story.c3.title">Gli altri</h3>
+        <p class="chapter__body" data-i18n="story.c3.body">Poi ho iniziato a vedere lo stesso problema ovunque. Persone intelligenti bloccate da lavori che nessuno dovrebbe fare. Ho iniziato a costruire per loro.</p>
+      </article>
+      <article class="chapter">
+        <span class="chapter__n" aria-hidden="true">04</span>
+        <h3 class="chapter__title" data-i18n="story.c4.title">Oggi</h3>
+        <p class="chapter__body" data-i18n="story.c4.body">Oggi costruisco siti, applicazioni e automazioni per persone e brand. Stessa regola di allora: se una macchina può farlo, che la faccia la macchina.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="story__bar" aria-hidden="true"><i id="storyFill"></i></div></div>
+</section>
+
+<!-- ══ 06 · PROCESSO ═══════════════════════════════════════════════════════ -->
+<section class="process" id="processo" aria-labelledby="proTitle">
+  <div class="process__pin">
+    <div class="process__media" aria-hidden="true">
+      <video class="process__video" id="machineVideo" muted playsinline preload="none"></video>
+      <div class="room" id="room">
+        <i class="room__wall"></i>
+        <i class="room__chair"></i>
+        <div class="room__screens"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <div class="process__scrim" aria-hidden="true"></div>
+    <p class="process__line" id="processLine" data-split data-i18n="process.line">Tu vai a dormire. Il software no.</p>
+  </div>
+
+  <div class="wrap process__body">
+    <header class="sec__head">
+      <p class="eyebrow" data-i18n="process.eyebrow">Come lavoro</p>
+      <h2 class="sec__title" id="proTitle" data-split data-i18n="process.title">Quattro passi. Nessuna sorpresa.</h2>
+    </header>
+
+    <ol class="steps" id="steps">
+      <li class="step">
+        <span class="step__i mono">01</span><i class="step__rule"></i>
+        <h3 class="step__title" data-i18n="process.s1.title">Ascolto</h3>
+        <p class="step__body" data-i18n="process.s1.body">Prima di scrivere una riga di codice voglio capire il problema vero. Spesso non è quello che pensavi.</p>
+      </li>
+      <li class="step">
+        <span class="step__i mono">02</span><i class="step__rule"></i>
+        <h3 class="step__title" data-i18n="process.s2.title">Progetto</h3>
+        <p class="step__body" data-i18n="process.s2.body">Scope fisso, tempi chiari, prezzo definito prima di iniziare. Niente preventivi che crescono in corsa.</p>
+      </li>
+      <li class="step">
+        <span class="step__i mono">03</span><i class="step__rule"></i>
+        <h3 class="step__title" data-i18n="process.s3.title">Costruisco</h3>
+        <p class="step__body" data-i18n="process.s3.body">Vedi avanzamenti reali ogni settimana, non un silenzio di due mesi seguito da una sorpresa.</p>
+      </li>
+      <li class="step">
+        <span class="step__i mono">04</span><i class="step__rule"></i>
+        <h3 class="step__title" data-i18n="process.s4.title">Consegno e resto</h3>
+        <p class="step__body" data-i18n="process.s4.body">Consegno il progetto e il codice: è tuo. E se serve, resto per farlo crescere.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 07 · LAVORI ═════════════════════════════════════════════════════════ -->
+<section class="work" id="lavori" aria-labelledby="worTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow" data-i18n="work.eyebrow">Lavori selezionati</p>
+      <h2 class="sec__title" id="worTitle" data-split data-i18n="work.title">Costruiti, rilasciati, in uso.</h2>
+    </header>
+  </div>
+
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Progetti">
+    <div class="gallery__pad" aria-hidden="true"></div>
+
+    <article class="card" data-slug="mutewell" data-cursor="drag">
+      <div class="card__media"><span class="card__ph" aria-hidden="true">MuteWell</span></div>
+      <div class="card__meta mono"><span data-i18n="platform.macos">macOS</span><span data-status></span></div>
+      <h3 class="card__title">MuteWell</h3>
+      <p class="card__body" data-i18n="work.mutewell">Il microfono sotto controllo, dalla barra dei menu. Una scorciatoia, e sai sempre se ti stanno sentendo.</p>
+    </article>
+
+    <article class="card" data-slug="cleancut" data-cursor="drag">
+      <div class="card__media"><span class="card__ph" aria-hidden="true">CleanCut</span></div>
+      <div class="card__meta mono"><span data-i18n="platform.macos">macOS</span><span data-status></span></div>
+      <h3 class="card__title">CleanCut</h3>
+      <p class="card__body" data-i18n="work.cleancut">Taglia i silenzi dai video e dall’audio, da solo. Ore di editing che si riducono a un’anteprima e un export.</p>
+    </article>
+
+    <article class="card" data-slug="aegisos" data-cursor="drag">
+      <div class="card__media"><span class="card__ph" aria-hidden="true">AegisOS</span></div>
+      <div class="card__meta mono"><span data-i18n="platform.cross">Multipiattaforma</span><span data-status></span></div>
+      <h3 class="card__title">AegisOS</h3>
+      <p class="card__body" data-i18n="work.aegisos">Orchestrazione di modelli AI con routing, fallback e controllo della spesa. Un pannello al posto del caos.</p>
+    </article>
+
+    <article class="card" data-slug="mt5-bridge" data-cursor="drag">
+      <div class="card__media"><span class="card__ph" aria-hidden="true">MT5 Bridge</span></div>
+      <div class="card__meta mono"><span data-i18n="platform.windows">Windows</span><span data-status></span></div>
+      <h3 class="card__title">MT5 Bridge</h3>
+      <p class="card__body" data-i18n="work.mt5">Legge i segnali, applica le regole di rischio ed esegue su MetaTrader 5. Il ponte tra un messaggio e un ordine.</p>
+    </article>
+
+    <div class="gallery__pad" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap work__foot">
+    <span class="mono" data-i18n="work.hint">Scorri per vedere tutto</span>
+    <span class="work__bar" aria-hidden="true"><i id="workFill"></i></span>
+  </div>
+
+</section>
+
+<!-- ══ 08 · CONTATTI ═══════════════════════════════════════════════════════ -->
+<section class="cta" id="contatti" aria-labelledby="ctaTitle">
+  <div class="wrap">
+    <h2 class="cta__title" id="ctaTitle">
+      <span class="cta__l" data-split data-i18n="cta.l1">Hai un’idea?</span>
+      <span class="cta__l sheen" data-split data-i18n="cta.l2">Costruiamola.</span>
+    </h2>
+    <p class="cta__sub reveal" data-i18n="cta.sub">Raccontami cosa hai in mente. Rispondo entro 24 ore, di persona.</p>
+
+    <form class="form" id="form" novalidate>
+      <div class="field">
+        <label for="f-name" data-i18n="form.name">Nome</label>
+        <input id="f-name" name="name" type="text" required autocomplete="name">
+        <small class="field__err" data-err></small>
+      </div>
+      <div class="field">
+        <label for="f-email" data-i18n="form.email">Email</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email">
+        <small class="field__err" data-err></small>
+      </div>
+      <div class="field">
+        <label for="f-type" data-i18n="form.type">Cosa ti serve</label>
+        <select id="f-type" name="type" data-i18n-options="form.typeOptions">
+          <option value="sito">Sito web</option>
+          <option value="app">Applicazione</option>
+          <option value="automazione">Automazione</option>
+          <option value="debug">Debug di un progetto esistente</option>
+          <option value="altro">Altro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-budget" data-i18n="form.budget">Budget indicativo (opzionale)</label>
+        <select id="f-budget" name="budget" data-i18n-options="form.budgetOptions">
+          <option value="">Da definire</option>
+          <option value="&lt;2k">Meno di 2.000 €</option>
+          <option value="2-5k">2.000 – 5.000 €</option>
+          <option value="5-10k">5.000 – 10.000 €</option>
+          <option value="10k+">Oltre 10.000 €</option>
+        </select>
+      </div>
+      <div class="field field--full">
+        <label for="f-msg" data-i18n="form.message">Il progetto</label>
+        <textarea id="f-msg" name="message" rows="5" required></textarea>
+        <small class="field__err" data-err></small>
+      </div>
+      <div class="field field--full form__submit">
+        <button class="btn btn--primary btn--lg" type="submit" data-magnetic data-cursor="link"><span data-i18n="form.send">Invia il messaggio</span></button>
+      </div>
+    </form>
+
+    <div class="form__done" id="formDone" role="status" aria-live="polite" hidden>
+      <svg viewBox="0 0 48 48" class="tick" aria-hidden="true"><path d="M12 25l9 9 16-18"/></svg>
+      <p data-i18n="form.done">Ricevuto. Ti rispondo entro 24 ore.</p>
+    </div>
+
+    <p class="cta__mail">
+      <span class="mono" data-i18n="cta.or">Oppure scrivimi direttamente:</span>
+      <a class="cta__mailLink" id="mailLink" href="#" data-cursor="link"></a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ 09 · FOOTER ═════════════════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div>
+        <a class="foot__mark" href="#hero" data-cursor="link">Stefano Mascellini</a>
+        <p class="foot__tag" data-i18n="footer.tagline">Software indipendente, costruito in Italia.</p>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="#servizi"  data-i18n="nav.services">Servizi</a>
+        <a href="#lavori"   data-i18n="nav.work">Lavori</a>
+        <a href="#percorso" data-i18n="nav.path">Percorso</a>
+        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+        <span id="social"></span>
+      </nav>
+    </div>
+
+    <div class="foot__rule" aria-hidden="true"></div>
+
+    <div class="foot__bot mono">
+      <span id="copy">© 2026 Stefano Mascellini</span>
+      <span class="foot__clock">Italia · <time id="clock">00:00:00</time></span>
+      <span class="lang lang--foot">
+        <button type="button" class="lang__btn is-active" data-lang="it">IT</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+      </span>
+    </div>
+
+    <p class="foot__colophon mono" data-i18n="footer.colophon">Composto in Space Grotesk, Inter e JetBrains Mono. Costruito a mano.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

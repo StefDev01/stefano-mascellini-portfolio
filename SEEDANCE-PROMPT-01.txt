@@ -1,0 +1,75 @@
+════════════════════════════════════════════════════════════════════════
+SCENA 01 — «L'APERTURA»
+Video hero del sito. Higgsfield Seedance 2.0.
+════════════════════════════════════════════════════════════════════════
+
+MODELLO      seedance_2_0
+DURATA       10 s
+RISOLUZIONE  1080p
+MODE         std          ← obbligatorio per il 1080p (fast si ferma a 720p)
+ASPECT       16:9
+BITRATE      high
+AUDIO        OFF          ← il default è ON: va spento a mano
+COSTO        90 crediti
+
+────────────────────────── PROMPT ─────────────────────────────────────
+
+Extreme cinematic product shot in a pure black void. A closed space grey
+machined aluminium laptop rests on an invisible black surface, lit by a
+single hard key light raking across the brushed metal lid, cold silver
+specular highlight travelling along its edge. The laptop begins to open in
+perfect slow motion — the screen half lifting upward while the keyboard base
+simultaneously tilts downward, unfolding symmetrically like a precision
+instrument. A blade of soft white light escapes from the widening seam
+between the two halves, growing brighter as the gap opens, spilling across
+the metal and into the void. Fine dust particles drift through the light
+beam. The camera performs one slow continuous dolly push-in toward the seam
+with a subtle downward tilt, the reflection on the aluminium sliding as the
+angle changes. The shot ends with the laptop fully open, the screen a clean
+field of glowing white light, the void around it absolute black.
+
+Shot on 35mm anamorphic, shallow depth of field, single hard key light with
+deep falloff, pure black void background, space grey machined aluminium
+surfaces, cold silver specular highlights, no colour cast, heavy negative
+space, slow deliberate camera, cinematic film grain, 24fps, photorealistic,
+premium product-film aesthetic, no people, no text overlays, no captions,
+no logos, no watermark.
+
+──────────────────────── NEGATIVE PROMPT ──────────────────────────────
+
+person, people, human figure, face, portrait, hands, fingers, arms,
+silhouette of a person, reflection of a person, crowd, text, captions,
+subtitles, watermark, logo, ui overlay, readable interface text, colour
+grading with teal or orange, neon, purple, blue tech glow, lens flare spam,
+fast cuts, whip pans, shaky handheld, stock footage look, crowded
+background, clutter, morphing objects, warped geometry, low resolution,
+oversharpened.
+
+──────────────────────── DA CONTROLLARE ───────────────────────────────
+
+1. Lo schermo finale deve restare LUCE BIANCA PIATTA, mai un'interfaccia.
+   Il titolo del sito esce da quella luce in HTML vero: se il video mostra
+   una UI, i due livelli litigano.
+2. L'ultimo secondo quasi immobile. Lo scrub finisce lì e ogni deriva si
+   legge come un glitch.
+3. Se le due metà che si aprono insieme fanno artefatti, rigenera con
+   «the lid lifting while the base settles downward»: stessa lettura,
+   più facile per il modello.
+
+──────────────────────── DOPO LA GENERAZIONE ──────────────────────────
+
+# -g 1 non è opzionale: senza, lo scrub allo scroll scatta.
+ffmpeg -i scene-01-hero_raw.mp4 -an -vf "scale=1920:-2,fps=24" \
+  -c:v libx264 -profile:v high -crf 22 -preset slow -g 1 -pix_fmt yuv420p \
+  -movflags +faststart assets/video/scene-01-hero.mp4
+
+ffmpeg -i scene-01-hero_raw.mp4 -an -vf "scale=1920:-2,fps=24" \
+  -c:v libvpx-vp9 -crf 34 -b:v 0 -g 1 assets/video/scene-01-hero.webm
+
+ffmpeg -i scene-01-hero_raw.mp4 -vf "select=eq(n\,12),scale=1920:-2" \
+  -frames:v 1 -q:v 80 assets/video/scene-01-hero.webp
+
+Poi in script.js:
+  videos: { hero: "assets/video/scene-01-hero.mp4", … }
+
+Il fallback CSS sparisce da solo e lo scrub prende il video.
