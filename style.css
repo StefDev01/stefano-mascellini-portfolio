@@ -693,6 +693,22 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 }
 .card__media img{width:100%; height:100%; object-fit:cover; filter:saturate(.25) contrast(1.06);
   transition:transform .8s var(--ease)}
+/* Icona dell'app: quadrata, centrata, mai stirata sul 4/3 della card.
+   Dimensionata sulla LARGHEZZA: dentro un grid con place-items:center una
+   height in percentuale non si risolve e l'immagine resta alla sua dimensione
+   naturale, sbordando dal riquadro. Il border-radius taglia anche gli spicchi
+   di sfondo rimasti nel ritaglio di MuteWell. Niente desaturazione: sono
+   marchi, non fotografie. */
+.card__media--icon img{
+  width:58%; height:auto; aspect-ratio:1; object-fit:cover;
+  border-radius:22.5%; filter:none;
+  box-shadow:0 26px 52px rgba(0,0,0,.65);
+  transition:transform .8s var(--ease);
+}
+@media (hover:hover){
+  .card:hover .card__media--icon img{transform:scale(1.05)}
+}
+.card__media--icon .card__ph{display:none}
 .card__media::after{
   content:""; position:absolute; inset:0;
   background:radial-gradient(ellipse at 50% 0%,rgba(232,234,237,.10),transparent 62%);

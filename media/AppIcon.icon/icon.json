@@ -1,0 +1,9 @@
+{
+  "fill" : { "solid" : "extended-srgb:0.14118,0.14118,0.15294,1.00000" },
+  "groups" : [
+    {
+      "layers" : [ { "image-name" : "AppIcon.png", "name" : "AppIcon" } ]
+    }
+  ],
+  "supported-platforms" : { "circles" : [], "squares" : [ "macOS" ] }
+}

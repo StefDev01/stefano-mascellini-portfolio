@@ -29,9 +29,11 @@ const SITE = {
   // ⚠️ Unica fonte per la striscia prodotti (§10) e i lavori (§16).
   // status: "" | "shipping" | "beta" | "dev"  — vedi Open Item #2.
   products: [
-    { slug: "mutewell",   status: "", poster: "", href: "" },
-    { slug: "cleancut",   status: "", poster: "", href: "" },
-    { slug: "aegisos",    status: "", poster: "", href: "" },
+    { slug: "mutewell",   status: "", poster: "assets/img/work/mutewell.webp", href: "" },
+    { slug: "cleancut",   status: "", poster: "assets/img/work/cleancut.webp", href: "" },
+    { slug: "aegisos",    status: "", poster: "assets/img/work/aegisos.webp",  href: "" },
+    // ⚠️ Manca l'icona di MT5 Bridge: finché poster resta vuoto la card usa il
+    // segnaposto tipografico. Basta metterne una in assets/img/work/ e citarla qui.
     { slug: "mt5-bridge", status: "", poster: "", href: "" }
   ],
 
@@ -221,6 +223,12 @@ const FINE    = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
    di scorrimento prima di arrivare a un contenuto. Vedi BUILD-PLAN §24. */
 const MOBILE  = window.matchMedia("(max-width: 767px)").matches;
 const EASE = "expo.out";
+/* Stato nascosto delle parole prima del reveal. Un solo posto, perché i valori
+   sono legati fra loro: la maschera .w ha un padding-bottom per le discendenti,
+   e la rotazione iniziale solleva gli angoli di (larghezza/2)·sin(θ) — sulle
+   parole larghe basta poco perché una fetta resti visibile a pagina aperta.
+   145% copre il padding più il sollevamento anche sulle righe più lunghe. */
+const HIDDEN = { yPercent: 145, rotate: 2.5 };
 
 let lang = "it";
 let lenis = null;
@@ -251,7 +259,7 @@ function revealWords(el, opts = {}) {
   if (!el) return;
   const words = splitWords(el);
   if (REDUCED) { gsap.set(words, { yPercent: 0, rotate: 0 }); el.classList.add("is-in"); return; }
-  gsap.set(words, { yPercent: 112, rotate: 3 });
+  gsap.set(words, HIDDEN);
   gsap.to(words, {
     yPercent: 0, rotate: 0, duration: 1.05, ease: EASE, stagger: 0.045,
     scrollTrigger: { trigger: opts.trigger || el, start: opts.start || "top 84%", once: true },
@@ -298,7 +306,7 @@ function applyLang(next, animate) {
         const words = splitWords(el);
         // Se il reveal è già avvenuto le nuove parole devono restare visibili.
         gsap.set(words, el.classList.contains("is-in") || REDUCED
-          ? { yPercent: 0, rotate: 0 } : { yPercent: 112, rotate: 3 });
+          ? { yPercent: 0, rotate: 0 } : HIDDEN);
       } else {
         el.textContent = val;
       }
@@ -361,8 +369,12 @@ function applyProducts() {
       if (media && !media.querySelector("img")) {
         const img = document.createElement("img");
         img.src = p.poster; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
-        img.width = 1200; img.height = 900;
-        img.addEventListener("error", () => img.remove(), { once: true });
+        img.width = 512; img.height = 512;
+        // Se il file non c'è si torna al segnaposto tipografico, senza buchi.
+        img.addEventListener("error", () => {
+          img.remove(); media.classList.remove("card__media--icon");
+        }, { once: true });
+        media.classList.add("card__media--icon");
         media.prepend(img);
       }
     }
@@ -621,7 +633,7 @@ function initHero() {
     return;
   }
 
-  gsap.set(flat, { yPercent: 118, rotate: 3 });
+  gsap.set(flat, HIDDEN);
   gsap.set([".hero__sub", ".hero__cta"], { y: 24 });
 
   /* ── APERTURA — parte da sola al caricamento ──────────────────────────
@@ -725,7 +737,7 @@ function initMission() {
     const prev = ScrollTrigger.getById("misText");
     if (prev) prev.kill();
     const words = $$(".w > .wi", el);
-    gsap.set(words, { yPercent: 110, rotate: 4 });
+    gsap.set(words, HIDDEN);
     gsap.to(words, {
       yPercent: 0, rotate: 0, ease: "none", stagger: .045,
       scrollTrigger: { id: "misText", trigger: el, start: "top 82%", end: "bottom 62%",
@@ -853,7 +865,7 @@ function initProcess() {
     const prev = ScrollTrigger.getById("procLine");
     if (prev) prev.kill();
     const words = $$(".w > .wi", line);
-    gsap.set(words, { yPercent: 115, rotate: 3 });
+    gsap.set(words, HIDDEN);
     gsap.set(line, { opacity: 1 });
     gsap.timeline({
       scrollTrigger: { id: "procLine", trigger: "#processo", start: "top top", end: END,
