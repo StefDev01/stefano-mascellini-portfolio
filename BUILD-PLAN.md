@@ -15,7 +15,7 @@ These are the only places in this document where information was invented or ass
 
 | # | Item | Status | Where it lives |
 |---|---|---|---|
-| 1 | **Public contact email** | Assumed `stefano.mascellini09@gmail.com`. A dedicated alias on a custom domain is strongly recommended for a public site. Editable at `SITE.email`. | §17 |
+| 1 | ~~Public contact email~~ | **Risolto (10 set 2026):** `stefanomascellinilavoro@gmail.com`, indirizzo di lavoro dedicato. In `SITE.email`. | §17 |
 | 2 | **Project status labels** | The existing `Portfolio/content/projects.ts` marks all four as `UNCONFIRMED`. Decide per project: *Disponibile · Beta · In sviluppo*. They appear in two places. | §10, §16 |
 | 3 | **Project one-liners** | Inferred from the feature flags in `Portfolio/content/projects.ts`. Confirm each line is accurate before launch. | §16 |
 | 4 | **Project poster images** | Four screenshots/renders needed at `assets/img/work/`. Until they exist, designed monochrome placeholders. | §16, §25 |
@@ -771,7 +771,7 @@ EN:  GOT AN IDEA?
 **Direct email fallback**, always visible beneath the form:
 `Oppure scrivimi direttamente:` / `Or email me directly:` → `SITE.email` as a large link with an underline-wipe hover.
 
-> ⚠️ Confirm which address should be public before launch (see Open Items #3).
+> Indirizzo pubblico: `stefanomascellinilavoro@gmail.com` (confermato, vedi Open Items #1).
 
 ---
 
