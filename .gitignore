@@ -11,3 +11,7 @@ assets/video/*_raw.*
 
 # Immagine di riferimento per le generazioni, non fa parte del sito
 assets/reference/
+
+# Documenti di lavoro: restano sul disco, fuori dal repo pubblico
+BUILD-PLAN.md
+SEEDANCE-PROMPT-01.txt
