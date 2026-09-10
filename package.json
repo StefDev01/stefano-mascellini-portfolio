@@ -1,0 +1,24 @@
+{
+  "name": "stefano-mascellini-portfolio",
+  "version": "1.0.0",
+  "description": "Sito statico. Solo HTML, CSS e JavaScript vanilla. Nessun framework, nessuna build. GSAP + ScrollTrigger + Lenis arrivano da CDN.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefDev01/stefano-mascellini-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefDev01/stefano-mascellini-portfolio/issues"
+  },
+  "homepage": "https://github.com/StefDev01/stefano-mascellini-portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
